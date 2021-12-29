@@ -3,14 +3,14 @@ package dc.advance.TwoPointer.assignment;
 public class PairsSumII {
 
     public static void main(String[] args) {
-/*        System.out.println(getSolve(new int[]{1, 1, 1}, 2));
+        System.out.println(getSolve(new int[]{1, 1, 1}, 2));
         System.out.println(getSolve(new int[]{1, 1}, 2));
-        System.out.println(getSolve(new int[]{2, 3, 5, 6, 10}, 6));*/
-        // System.out.println(getSolve(new int[]{1, 2, 6, 6, 7, 9, 9}, 13));
-        //System.out.println(getSolve(new int[]{2, 3, 3, 5, 7, 7, 8, 9, 9, 10, 10}, 11));
-        //System.out.println(getSolve(new int[]{1, 1, 2, 2, 3, 3, 4, 5, 5, 6, 9, 10}, 5));
-        //System.out.println(getSolve(new int[]{2, 2, 3, 4, 4, 5, 6, 7, 10}, 8));
-       // System.out.println(getSolve(new int[]{1, 2, 6, 6, 7, 9, 9}, 13));
+        System.out.println(getSolve(new int[]{2, 3, 5, 6, 10}, 6));
+        System.out.println(getSolve(new int[]{1, 2, 6, 6, 7, 9, 9}, 13));
+        System.out.println(getSolve(new int[]{2, 3, 3, 5, 7, 7, 8, 9, 9, 10, 10}, 11));
+        System.out.println(getSolve(new int[]{1, 1, 2, 2, 3, 3, 4, 5, 5, 6, 9, 10}, 5));
+        System.out.println(getSolve(new int[]{2, 2, 3, 4, 4, 5, 6, 7, 10}, 8));
+        System.out.println(getSolve(new int[]{1, 2, 6, 6, 7, 9, 9}, 13));
         System.out.println(getSolve(new int[]{2, 2, 3, 4, 4, 5, 6, 7, 10}, 8));
     }
 
@@ -48,22 +48,4 @@ public class PairsSumII {
         }
         return (int) (res % mod);
     }
-
-    /*{
-        int x = A[i];
-        int xx = i;
-        while ((i < j) && (A[i] == x)) {
-            i++;
-        }
-        int y = A[j], yy = j;
-        while ((j >= i) && (A[j] == y)) {
-            j--;
-        }
-        if (x == y) {
-            int temp = i - xx + yy - j - 1;
-            res += (temp * (temp + 1)) / 2;
-        } else {
-            res += (i - xx) * (yy - j);
-        }
-    }*/
 }

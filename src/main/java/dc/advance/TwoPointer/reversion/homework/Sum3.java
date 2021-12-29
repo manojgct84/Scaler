@@ -4,6 +4,22 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
+/**
+ * Problem Description
+ *
+ * Given an array A of N integers, find three integers in A such that the sum is closest to a given
+ * number B. Return the sum of those three integers.
+ *
+ * Assume that there will only be one solution.
+ *
+ *
+ *
+ * Problem Constraints
+ *
+ * -108 <= B <= 108
+ * 1 <= N <= 104
+ * -108 <= A[i] <= 108
+ */
 public class Sum3 {
 
     public static void main(String[] args) {
