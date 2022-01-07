@@ -15,7 +15,6 @@ public class PairsSumII {
     }
 
     static int mod = 1000000007;
-
     public static int getSolve(int[] A, int B) {
         int i = 0;
         int j = A.length - 1;

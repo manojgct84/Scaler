@@ -31,7 +31,7 @@ public class InversionCountArray {
         count += split(a, start, mid);
         count += split(a, mid + 1, end);
         count += merge(a, start, mid, end);
-        return count;
+        return count % mod;
     }
     static int  mod = (1000000007);
     private static int merge(int[] a, int start, int mid, int end) {
@@ -62,6 +62,6 @@ public class InversionCountArray {
             a[start + index] = aux[index];
         }
         //  System.out.println(Arrays.toString(a));
-        return count;
+        return count % mod;
     }
 }

@@ -41,6 +41,4 @@ public class Array3Pointers {
         System.out.println("res " + res);
         return res;
     }
-
-
 }
