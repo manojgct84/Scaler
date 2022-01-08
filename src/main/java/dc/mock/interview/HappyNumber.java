@@ -16,6 +16,21 @@ import dc.advance.resursion.reversion.recursion1.assignment.IsMagic;
  */
 //https://www.educative.io/edpresso/how-to-solve-the-happy-number-problem-in-java
 
+/**
+ * T[N] =  n/2 + T(n/10)
+ * T[n/10] = n/4 + T[n/10]
+ *  T[n]  = n/2^k + T[n/k]
+ *  n/2^k = 0
+ *  n = 2^k
+ *  log k = n
+ *  n/k = 0 // base condition
+ *  n = k
+ *  T[n] = log k + T(k/k)
+ *
+ *  T[n] = log k
+ *
+  */
+
 public class HappyNumber {
     public static void main(String[] args) {
         System.out.println(new HappyNumber().solve(83557));
