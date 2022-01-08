@@ -49,7 +49,7 @@ public class HappyNumber {
     }
 
     private boolean solve(int A) {
-        Integer input = new Integer(A);
+        int input = A;
         while (A > 9) {
             A = sumSqrtDigits(A);
             System.out.println(A);
