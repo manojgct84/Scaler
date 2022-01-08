@@ -48,7 +48,7 @@ public class HappyNumber {
         System.out.println(new HappyNumber().solveSet(10));
         System.out.println(new HappyNumber().solveSet(1234567349));
         System.out.println(new HappyNumber().solveSet(19));
-        System.out.println(new HappyNumber().solveSet(44));
+        System.out.println(new HappyNumber().solveSet(33));
         System.out.println(new HappyNumber().solveSet(16));
     }
 
