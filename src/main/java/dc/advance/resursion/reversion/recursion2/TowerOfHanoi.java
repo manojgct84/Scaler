@@ -2,6 +2,15 @@ package dc.advance.resursion.reversion.recursion2;
 
 import java.util.ArrayList;
 
+/**
+ * TC : O(N^2 )
+ * T[N] = 2T[N-1] + 1
+ * T[N-1] = 4T[N-2] + 3
+ * T[N^K] = 2^KT[N-K] + [2^K - 1]
+ * N-K =0 // Base condition
+ * K = N
+ * T[N] = O(2^N)
+ */
 public class TowerOfHanoi {
     public static void main(String[] args) {
         System.out.println(towerOfHanoi(2));
