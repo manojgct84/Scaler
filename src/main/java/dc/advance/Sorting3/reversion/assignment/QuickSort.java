@@ -27,6 +27,13 @@ public class QuickSort {
         quickSort(a, pivotIndex + 1, r);
     }
 
+    /**
+     * This is to rearrange the value based on the pivot index "l".
+     * @param a - original array
+     * @param l - subarray start
+     * @param r - subarray end
+     * @return - next subarray left and right subarray pivotIndex.
+     */
     private static int reArrange(int[] a, int l, int r) {
         int p1 = l + 1; //pivot is "l"
         int p2 = r;
