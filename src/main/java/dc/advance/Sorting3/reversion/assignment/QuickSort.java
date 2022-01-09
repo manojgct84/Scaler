@@ -23,8 +23,8 @@ public class QuickSort {
             return;
         }
         int pivotIndex = reArrange(a, l, r);
-        quickSort(a, l, pivotIndex - 1);
-        quickSort(a, pivotIndex + 1, r);
+        quickSort(a, l, pivotIndex - 1); //left half subarray
+        quickSort(a, pivotIndex + 1, r); //right half subarray
     }
 
     /**
