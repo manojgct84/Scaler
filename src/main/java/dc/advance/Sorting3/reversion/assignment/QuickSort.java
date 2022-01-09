@@ -23,7 +23,7 @@ public class QuickSort {
     }
 
     private static int reArrange(int[] a, int l, int r) {
-        int p1 = l + 1;
+        int p1 = l + 1; //pivot is "l"
         int p2 = r;
 
         while (p1 <= p2) {
@@ -37,8 +37,8 @@ public class QuickSort {
                 p2--;
             }
         }
-        swap(a, l, p2);
-        return p1 - 1;
+        swap(a, l, p2); //swap the pivot value in the correct location.
+        return p2;// or p1 - 1  - the p1 and p2 will cross over.
     }
 
     private static void swap(int[] a, int p1, int p2) {
