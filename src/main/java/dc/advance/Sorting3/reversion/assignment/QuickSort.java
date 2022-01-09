@@ -2,6 +2,11 @@ package dc.advance.Sorting3.reversion.assignment;
 
 import java.util.Arrays;
 
+/**
+ * To better understand : https://www.khanacademy.org/computing/computer-science/algorithms/quick-sort/a/analysis-of-quicksort
+ * on the TC
+ */
+
 public class QuickSort {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(solve(new int[]{1, 4, 10, 2, 1, 5})));
