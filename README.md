@@ -108,3 +108,13 @@
    ```
    if you need to store data  within a range always for given input - %
    ```
+### To calculate large power
+```
+    Fast Power Function
+    Fermat's theorem  
+```
+
+### Tree
+```
+    https://www.scaler.com/topics/data-structures/binary-tree-in-data-structure/
+    https://www.scaler.com/topics/data-structures/tree-data-structure/
