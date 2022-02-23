@@ -1,17 +1,17 @@
 # Scaler
 
-##Some of the observation need to noted when you are solving a problem.
+## Some of the observation need to noted when you are solving a problem.
 
-###If input array is sorted/rotated/max/min[cow problem] then
+### If input array is sorted/rotated/max/min[cow problem] then
   ```  
     - Binary Search
     - Two Pointer
   ```
-###if asked for all permutation/subset then
+### if asked for all permutation/subset then
   ```
      - Backtracking
   ```   
-###if given a tree then
+### if given a tree then
   ```
      - BSF
      - DFS
@@ -22,37 +22,37 @@
      - queue
   ```
 
-###if given a BST tree
+### if given a BST tree
   ```
      -inOrder [This will give a sorted array]
   ```
      
-###if given a graph then
+### if given a graph then
   ```
     -DFS
     -BFS
   ```  
 
-###if given a linked list
+### if given a linked list
   ```
     -Two pointers [slow and fast]
     -mergesort logic
   ```
 
-###if recursion is banned then
+### if recursion is banned then
   ```
    - stack
    - master Therom T(N) = a * T(n/b) + O( n^d)
   ```
 
-###if must solve in-place then
+### if must solve in-place then
   ```
    - swap corresponding value
    - store or more different values in the same pointer 
    - A[i] = A[i] + (A[A[i]] %N) *N 
   ```
 
-###if asked for max/ min subarray/subset
+### if asked for max/ min subarray/subset
   ``` 
    - Dynamic Programming  
    - prefix {pref[i] = pref[i - 1] + A.get(i)}
@@ -64,19 +64,19 @@
    - Kadane's Algo        
   ```            
 
-###if asked for common string then
+### if asked for common string then
    ```
    - Map
    - Tries
    ``` 
 
-##then
+## then
 ```
     - Map/Set for TC O(1) and SC O(N)
     - Sort input for TC O(nlogn) and SC(N)
 ```    
     
-###if same diff between two number in array
+### if same diff between two number in array
 ```
     - A.P - n/2[2a + (n-1)d] 
            n - number of items
@@ -84,17 +84,17 @@
            d - common diff    
 ```
     
-###if Geometric Progression
+### if Geometric Progression
 ```
     - a(r^n -1)/r - 1
 ```
     
-###if Subsequence - means non-continuous but maintain order
+### if Subsequence - means non-continuous but maintain order
 ```
     - 2^n - total subseq  
 ```
     
-###Bits
+### Bits
    ```
    - n & 1 = 1 [odd] / 0 [even]
    - n ^ 0 = n
@@ -104,7 +104,7 @@
    - A ^= 1<<i - toggle a bit
   ```
 
-###Mod
+### Mod
    ```
    if you need to store data  with a range always for given input - %
    ```
