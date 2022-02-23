@@ -106,5 +106,5 @@
 
 ### Mod
    ```
-   if you need to store data  with a range always for given input - %
+   if you need to store data  within a range always for given input - %
    ```
