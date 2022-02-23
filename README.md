@@ -71,28 +71,21 @@
    ``` 
 
 ##then
-    ```
     -Map/Set for TC O(1) and SC O(N)
     -Sort input for TC O(nlogn) and SC(N)
-    ```
+    
     
 ###if same diff between two number in array
-    ```
     -A.P - n/2[2a + (n-1)d] 
            n - number of items
            a - first iterms
            d - common diff    
-    ``` 
     
 ###if Geometric Progression
-    ```
     - a(r^n -1)/r - 1
-    ```
     
 ###if Subsequence - means non-continuous but maintain order
-    ```
     - 2^n - total subseq  
-    ```
     
 ###Bits
    ```
