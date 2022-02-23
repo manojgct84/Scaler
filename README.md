@@ -38,17 +38,20 @@
     -Two pointers [slow and fast]
     -mergesort logic
   ```
+
 ###if recursion is banned then
   ```
    - stack
    - master Therom T(N) = a * T(n/b) + O( n^d)
   ```
+
 ###if must solve in-place then
   ```
    - swap corresponding value
    - store or more different values in the same pointer 
    - A[i] = A[i] + (A[A[i]] %N) *N 
   ```
+
 ###if asked for max/ min subarray/subset
   ``` 
    - Dynamic Programming  
@@ -60,16 +63,19 @@
            End of point   - (n -i)
    - Kadane's Algo        
   ```            
+
 ###if asked for common string then
    ```
    - Map
    - Tries
    ``` 
+
 ##then
     ```
     -Map/Set for TC O(1) and SC O(N)
     -Sort input for TC O(nlogn) and SC(N)
     ```
+    
 ###if same diff between two number in array
     ```
     -A.P - n/2[2a + (n-1)d] 
@@ -77,14 +83,17 @@
            a - first iterms
            d - common diff    
     ``` 
+    
 ###if Geometric Progression
     ```
     - a(r^n -1)/r - 1
     ```
+    
 ###if Subsequence - means non-continuous but maintain order
     ```
     - 2^n - total subseq  
     ```
+    
 ###Bits
    ```
    - n & 1 = 1 [odd] / 0 [even]
@@ -94,6 +103,7 @@
    - N&(N-1) = power of 2
    - A ^= 1<<i - toggle a bit
   ```
+
 ###Mod
    ```
    if you need to store data  with a range always for given input - %
