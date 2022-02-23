@@ -13,6 +13,7 @@ public class MinimumPalindrome {
 
     public static void main(String[] args) {
         System.out.println(solve("abcdefd"));
+        System.out.println(solve("abaab"));
         System.out.println(interviewBit("oqycntornscygodzdctxnhoc"));
     }
 
