@@ -66,7 +66,9 @@ public class NodeDistanceCBinaryTree {
 
     public static ArrayList<Integer> getNodes(TreeNode A, int C) {
         ArrayList<Integer> nodes = new ArrayList<>();
-        if (A == null) return nodes;
+        if (A == null) {
+            return nodes;
+        }
         if (C == 0) {
             nodes.add(A.val);
             return nodes;
