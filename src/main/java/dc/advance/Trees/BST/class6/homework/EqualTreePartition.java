@@ -3,7 +3,7 @@ package dc.advance.Trees.BST.class6.homework;
 import java.util.HashSet;
 
 public class EqualTreePartition {
-    static HashSet<Integer> set;
+    static HashSet<Long> set;
 
     public static void main(String[] args) {
 
@@ -28,7 +28,7 @@ public class EqualTreePartition {
 
     public static int equalTreePartition(TreeNode root) {
         set = new HashSet<>();
-        int sum = findSum(root);
+        long sum = findSum(root);
         System.out.print(set.toString());
         if (sum % 2 != 0) {
             return 0;
@@ -40,13 +40,13 @@ public class EqualTreePartition {
         return 0;
     }
 
-    private static int findSum(TreeNode root) {
+    private static long findSum(TreeNode root) {
         if (root == null) {
             return 0;
         }
-        int val = root.val;
-        int l = findSum(root.left);
-        int r = findSum(root.right);
+        long val = root.val;
+        long l = findSum(root.left);
+        long r = findSum(root.right);
         set.add(val + l + r);
         return val + l + r;
     }

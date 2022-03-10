@@ -70,14 +70,11 @@ public class BClosestPointsOrigin {
 
     public static ArrayList<ArrayList<Integer>> getSolve(ArrayList<ArrayList<Integer>> A, int B) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
-        Queue<List<Integer>> queue = new PriorityQueue<>(new Comparator<List<Integer>>() {
-            @Override
-            public int compare(List<Integer> o1, List<Integer> o2) {
-                if (o1.get(0) * o1.get(0) + o1.get(1) * o1.get(1) >= o2.get(0) * o2.get(0) + o2.get(1) * o2.get(1)) {
-                    return 1;
-                }
-                return -1;
+        Queue<List<Integer>> queue = new PriorityQueue<>((o1, o2) -> {
+            if (o1.get(0) * o1.get(0) + o1.get(1) * o1.get(1) >= o2.get(0) * o2.get(0) + o2.get(1) * o2.get(1)) {
+                return 1;
             }
+            return -1;
         });
 
         for (List<Integer> lst : A) {

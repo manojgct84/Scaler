@@ -17,7 +17,7 @@ public class ConnectRopes {
 
         int cost = 0;
         int y = 0;
-        int x = 0;
+        int x;
         for (int i = 0; i < A.size(); i++) {
             if (heap.size() != 0) {
                 x = heap.poll();

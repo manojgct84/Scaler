@@ -118,3 +118,43 @@
 ```
     https://www.scaler.com/topics/data-structures/binary-tree-in-data-structure/
     https://www.scaler.com/topics/data-structures/tree-data-structure/
+```
+
+### Common time complexities
+
+```
+    Let n be the main variable in the problem.
+
+• If n ≤ 12, the time complexity can be O(n!).
+
+• If n ≤ 25, the time complexity can be 0(2").
+
+• If n ≤ 100, the time complexity can be O(n^).
+
+• If n ≤ 500, the time complexity can be 0(n³). • If n ≤ 104, the time complexity can be O(n²).
+
+• If n ≤ 106, the time complexity can be O(n log n).
+
+• If n ≤ 108, the time complexity can be O(n).
+
+• If n > 108, the time complexity can be O(log n) or 0(1).
+
+Examples of each common time complexity
+
+• O(n!) [Factorial time]: Permutations of 1 ... n
+
+• O(2¹) [Exponential time]: Exhaust all subsets of an array of size n
+
+• O(n³) [Cubic time]: Exhaust all triangles with side length less than n
+
+• O(n²) [Quadratic time]: Slow comparison-based sorting (eg. Bubble Sort, Insertion Sort, Selection Sort)
+
+• O(n log n) [Linearithmic time]: Fast comparison-based sorting (eg. Merge Sort)
+
+• O(n) [Linear time]: Linear Search (Finding maximum/minimum element in a 1D array), Counting Sort
+
+• O(log n) [Logarithmic time]: Binary Search, finding GCD (Greatest Common Divisor) using Euclidean Algorithm
+
+• 0(1) [Constant time]: Calculation (eg. Solving linear equations in one
+
+unknown)

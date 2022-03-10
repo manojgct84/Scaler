@@ -72,10 +72,10 @@ public class MaximumXORSubarray {
         return curr.pair;
     }
 
-    private static void insert(int number, int idx) {
+    private static void insert(int n, int idx) {
         TrieNode curr = root;
         for (int i = 31; i >= 0; i--) {
-            int bit = number & (1 << i);
+            int bit = n & (1 << i);
             if (bit > 0) {
                 if (curr.one == null) {
                     curr.one = new TrieNode();
@@ -88,7 +88,7 @@ public class MaximumXORSubarray {
                 curr = curr.zero;
             }
         }
-        curr.pair = new Pair(number, idx);
+        curr.pair = new Pair(n, idx);
     }
 
     static class TrieNode {
