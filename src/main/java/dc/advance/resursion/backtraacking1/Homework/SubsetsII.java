@@ -29,6 +29,4 @@ public class SubsetsII {
             temp.remove(temp.size() - 1);
         }
     }
-
-
 }
