@@ -158,3 +158,9 @@ Examples of each common time complexity
 • 0(1) [Constant time]: Calculation (eg. Solving linear equations in one
 
 unknown)
+
+```
+
+### 14 Patterns to Ace Any Coding Interview Question
+
+https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed
