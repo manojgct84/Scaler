@@ -42,8 +42,8 @@ public class MaxSumPathBinaryTree {
 
         int left = Math.max(0, sumOfAllPath(root.left));
         int right = Math.max(0, sumOfAllPath(root.right));
-
-        ans = Math.max(ans, root.val + Math.max(left ,0) + Math.max(right,0));
+    
+        ans = Math.max (ans , root.val + Math.max (left , 0) + Math.max (right , 0));
         return root.val + Math.max(left, right);
     }
 

@@ -8,6 +8,13 @@ public class WaysToDecode {
 		System.out.println(numDecodings("12"));
 		System.out.println(numDecodings("8"));
 		System.out.println(numDecodings("4126"));
+		
+		System.out.println ("***ServiceNow****");
+		System.out.println(decode ("12"));
+		System.out.println(decode("8"));
+		System.out.println(decode("4126"));
+		System.out.println(decode("123"));
+		System.out.println(decode("923216"));
 	}
 	
 	static int[] dp;
@@ -39,8 +46,7 @@ public class WaysToDecode {
 			if(c[index - 2] - '0' == 1) {
 				dp[index] = dp[index] % mod + dp[index - 2] % mod;
 			}
-			else if(c[index - 2] - '0' == 2 && (c[index - 1] - '0' >= 0
-			&& c[index - 1] - '0' <= 6)) {
+			else if(c[index - 2] - '0' == 2 && (c[index - 1] - '0' >= 0 && c[index - 1] - '0' <= 6)) {
 				dp[index] = dp[index] % mod + dp[index - 2] % mod;
 			}
 			return dp[index];
@@ -70,5 +76,32 @@ public class WaysToDecode {
 			}
 		}
 		return dp[index] == -1 ? 0 : dp[index];
+	}
+	
+	public static int decode (String str)
+	{
+		if (str == null || str.equals ("")) {
+			return 0;
+		}
+		
+		if (str.length () == 1) return  1;
+		
+		if (str.length () == 2 && str.charAt (0) - '0' > 0 && str.charAt (0) - '0' < 3
+						&& str.charAt (1) - '0' < 7) {
+			return 3;
+		}
+		
+		int count = 1;
+		StringBuilder append = new StringBuilder ();
+		for (int i = 0 ; i < str.length ()  - 1; i++) {
+			append.append (str.charAt (i) - '0');
+			append.append ( str.charAt (i + 1) - '0');
+			String s = append.toString ();
+			if (Integer.parseInt (s) > 9 && Integer.parseInt (s) < 27) {
+				count++;
+			}
+			append.delete (0,append.length ());
+		}
+		return count;
 	}
 }

@@ -9,40 +9,40 @@ public class BinaryTreeFromInorderAndPostorder {
     }
 
 
-    public static TreeNode buildTree(int[] in, int[] pre) {
+    public static TreeNode buildTree(int[] in, int[] post) {
 
-        if (pre.length == 0 || in.length == 0) {
+        if (post.length == 0 || in.length == 0) {
             return null;
         }
 
-        if (pre.length > in.length) {
+        if (post.length > in.length) {
             return null;
         }
 
-        if (pre.length < in.length) {
+        if (post.length < in.length) {
             return null;
         }
 
-        return mergeInOrderAndPostOrder(pre, 0, pre.length - 1, in, 0, in.length - 1);
+        return mergeInOrderAndPostOrder(post, 0, post.length - 1, in, 0, in.length - 1);
     }
 
-    private static TreeNode mergeInOrderAndPostOrder(int[] pre, int preStart, int preEnd, int[] in,
+    private static TreeNode mergeInOrderAndPostOrder(int[] post, int postStart, int postEnd, int[] in,
                                                      int inStart, int inEnd) {
-        if (preStart > preEnd) {
+        if (postStart > postEnd) {
             return null;
         }
 
-        TreeNode node = new TreeNode(pre[preEnd]);
+        TreeNode node = new TreeNode(post[postEnd]);
 
         if (inStart == inEnd) {
             return node;
         }
 
-        int index = searchRootElement(in, pre[preEnd]);
+        int index = searchRootElement(in, post[postEnd]);
         node.right = mergeInOrderAndPostOrder(
-                pre, preStart + index, preEnd - 1, in, index + 1, inEnd);
+                        post, postStart + index, postStart - 1, in, index + 1, inEnd);
         node.left = mergeInOrderAndPostOrder(
-                pre, preStart, preStart + index - 1, in, inStart, index - 1);
+                        post, postStart, postStart + index - 1, in, inStart, index - 1);
         return node;
     }
 

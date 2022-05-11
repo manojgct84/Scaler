@@ -14,23 +14,25 @@ public class PrimeSum {
         int[] isPrime = new int[A + 1];
         isPrime[0] = -1;
         isPrime[1] = -1;
-        for (int i = 2; i <= A; i++) {
+        for (int i = 2; i <= A; i++) { // Init
             isPrime[i] = 0;
         }
-
-        for (int i = 2; i * i <= A; i++) {
+    
+        for (int i = 2 ; (i * i) <= A ; i++) {
             if (isPrime[i] == 0) {
-                for (int j = i * i; j <= A; j = j + i) {
+                for (int j = i * i ; j <= A ; j = j + i) {
                     isPrime[j] = 1;
                 }
             }
         }
+
         System.out.println(Arrays.toString(isPrime));
+        
         List<Integer> res = new ArrayList<>();
-        for (int i = 1; i <=(A - i); i++) {
+        for (int i = 1 ; i <= (A - i) ; i++) {
             if (isPrime[i] == 0 && isPrime[A - i] == 0) {
-                res.add(i);
-                res.add(A - i);
+                res.add (i);
+                res.add (A - i);
                 break;
             }
         }

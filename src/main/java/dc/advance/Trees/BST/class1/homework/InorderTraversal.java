@@ -29,7 +29,6 @@ public class InorderTraversal {
         }
 
         public static ArrayList<Integer> inorderTraversal(TreeNode root) {
-
             ArrayList<Integer> lst = new ArrayList<>();
             inorderTraversalRecursion(root, lst);
             return lst;

@@ -56,9 +56,9 @@ public class LeastCommonAncestor {
         return left != -1 ? left : right;
     }
 
-    //There are 4 way the we will return - parent node having two child which match B & C
-    // parent node having one child which match B  and C dont return
-    // parent node having one child which match C  and B dont return
+    //There are 4 way that we will return - parent node having two child which match B & C
+    // parent node having one child which match B  and C don't return
+    // parent node having one child which match C  and B don't return
     // There is another way both dont match and return null from the child.
     private static TreeNode inOrderClassical(TreeNode root, int B, int C) {
 

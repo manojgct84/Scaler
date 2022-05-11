@@ -14,8 +14,7 @@ public class LongestCommonSubsequence {
     public static int longestCommonSubsequence(String A, String B) {
         dp = new int[A.length() + 1][B.length() + 1];
         lcs = new int[A.length() + 1][B.length() + 1];
-        longestCommonSubsequenceRecursion(A,
-                B, A.length(), B.length());
+        longestCommonSubsequenceRecursion(A, B, A.length(), B.length());
         System.out.println(dp[0][0]);
         return longestCommonSubsequenceIterative(A, B);
     }
