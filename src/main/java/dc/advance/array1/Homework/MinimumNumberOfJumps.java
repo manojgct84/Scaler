@@ -3,7 +3,7 @@ package dc.advance.array1.Homework;
 public class MinimumNumberOfJumps {
 
     public static void main(String[] args) {
-        System.out.println(solve(new int[]{1, 2, 3, 4, 5}));
+        System.out.println(finadMinJump(new int[]{1, 2, 3, 4, 5}));
     }
 
     public static int finadMinJump(int[] A) {
