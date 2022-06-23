@@ -5,6 +5,10 @@ import java.util.ArrayList;
 
 public class MergeKSortedLists {
 
+    //Step 1: Create a linkedlist from the arrayList of node using dummyLinkedList.
+    //Step 2: Find the mid node using fast and slow pointer
+    //Step 3: Sort the list using the mergeSort
+
     public static void main(String[] args) {
         ArrayList<ListNode> input = new ArrayList<>();
 

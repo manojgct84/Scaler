@@ -1,6 +1,10 @@
 package dc.LinkedList.Class1.assignment;
 
+import java.util.Objects;
+
 public class DeleteLinkedList {
+
+    //Delete the middle node.
 
     public static void main(String[] args) {
         ListNode node0 = new ListNode(1);
@@ -16,7 +20,7 @@ public class DeleteLinkedList {
         node3.next = node4;
         node4.next = node5;
 
-        printNode(solve(node0));
+        printNode(Objects.requireNonNull(solve(node0)));
 
     }
 

@@ -3,7 +3,7 @@ package dc.advance.Searching.assignment;
 public class RotatedSortedArraySearch {
 
     public static void main(String[] args) {
-        //  System.out.println(getSearch(new int[]{4, 5, 6, 7, 0, 1, 2, 3}, 4));
+        System.out.println(getSearch(new int[]{4, 5, 6, 7, 0, 1, 2, 3}, 4));
         System.out.println(getMySearch(new int[]{50, 60, 100, 3, 9, 10, 25, 30, 35}, 25));
     }
 

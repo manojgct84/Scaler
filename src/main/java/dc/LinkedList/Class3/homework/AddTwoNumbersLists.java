@@ -1,5 +1,7 @@
 package dc.LinkedList.Class3.homework;
 
+import java.util.List;
+
 import dc.LinkedList.Class1.assignment.ListNode;
 
 public class AddTwoNumbersLists {
@@ -20,6 +22,7 @@ public class AddTwoNumbersLists {
         node4.next = node6;
 
         printNode(addTwoNumbers(node0, node3));
+        printNode(addTwoRecursive(node0, node3));
     }
 
     public static void printNode(ListNode head) {
@@ -62,6 +65,41 @@ public class AddTwoNumbersLists {
             tail = tail.next;
             total /= 10;
         }
-        return dummy.next;
+
+        return reverse(dummy);
+    }
+
+    private static ListNode reverse(ListNode dummy) {
+        ListNode curr = dummy;
+        ListNode prev = null;
+        while (curr != null) {
+            if (curr.val == -1) {
+                curr = curr.next;
+            }
+            ListNode temp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = temp;
+        }
+        return prev;
+    }
+
+
+    private static ListNode addTwoRecursive(ListNode node1, ListNode node2) {
+        ListNode result = new ListNode(-1);
+        ListNode res = result;
+        recursive(node1, node2, res);
+        return result.next;
+    }
+
+    private static int recursive(ListNode node1, ListNode node2, ListNode res) {
+        if (node1 == null) {
+            return 0;
+        }
+        int val = node1.val + node2.val + recursive(node1.next, node2.next, res);
+        ListNode node = new ListNode(val % 10);
+        node.next = res.next;
+        res.next = node;
+        return val / 10;
     }
 }
