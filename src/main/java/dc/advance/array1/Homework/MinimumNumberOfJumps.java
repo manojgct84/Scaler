@@ -6,11 +6,10 @@ public class MinimumNumberOfJumps {
         System.out.println(solve(new int[]{1, 2, 3, 4, 5}));
     }
 
-    public static int solve(int[] A) {
+    public static int finadMinJump(int[] A) {
         int maxJump = A[0];
         int stepsToMove = A[0];
         int jump = 1;
-
         if (maxJump == 0) {
             return -1;
         }

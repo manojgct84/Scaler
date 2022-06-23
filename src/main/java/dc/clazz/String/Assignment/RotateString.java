@@ -7,7 +7,7 @@ public class RotateString {
         System.out.println(getSolution(str, 7));
     }
 
-    //Best solution to rotate a array for a given B.
+    //Best solution to rotate an array for a given B.
     private static String getSolution(String a, int k) {
 
         char[] c = a.toCharArray();

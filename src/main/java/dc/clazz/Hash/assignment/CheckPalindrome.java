@@ -6,7 +6,9 @@ import java.util.Map;
 public class CheckPalindrome {
 
     public static void main(String[] args) {
-        System.out.println(getSolution("aabbaa"));
+        System.out.println(getSolutionReArrange("aabbaa"));
+        System.out.println(getSolutionReArrange("abecbea"));
+        System.out.println(getSolutionReArrange("abcba"));
     }
 
     public static int getSolution(String A) {

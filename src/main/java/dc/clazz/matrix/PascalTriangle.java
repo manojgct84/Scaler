@@ -19,7 +19,7 @@ public class PascalTriangle {
                 if (j == 0) {
                     res[i][j] = res[i - 1][j];
                 } else {
-                    res[i][j] = res[i - 1][j] + res[i - 1][j - 1];
+                    res[i][j] =  res[i - 1][j - 1] + res[i - 1][j];
                 }
             }
         }

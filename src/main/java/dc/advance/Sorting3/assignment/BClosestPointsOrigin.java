@@ -44,8 +44,7 @@ public class BClosestPointsOrigin {
             return -1;
         });
         for (List<Integer> ints : A) {
-            List<Integer> lst = new ArrayList<>();
-            lst.addAll(ints);
+            List<Integer> lst = new ArrayList<>(ints);
             priority.add(lst);
         }
 
