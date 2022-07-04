@@ -12,8 +12,8 @@ public class SubsetsII {
 
     public static ArrayList<ArrayList<Integer>> getSubsetsWithDup(ArrayList<Integer> A) {
         Collections.sort(A);
-        ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
-        subsetsWithDup(res, A, 0, new ArrayList<Integer>());
+        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+        subsetsWithDup(res, A, 0, new ArrayList<>());
         return res;
     }
 

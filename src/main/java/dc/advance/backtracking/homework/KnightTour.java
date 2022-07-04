@@ -19,21 +19,20 @@ public class KnightTour {
 
     private boolean knightTour(int a, int[][] solution, int row, int col, int[][] directions) {
 
-        if (row  == a * a) {
+        if (row == a * a) {
             return true;
         }
-
         int nextR = 0;
         int nextC = 0;
         for (int i = 0; i < 8; i++) {
-             nextR = row + directions[i][1];
+            nextR = row + directions[i][1];
             nextC = col + directions[0][i];
-             if (directionValid(nextR,nextC, solution)) {
-                  if (knightTour(a,  solution, nextR + 1, nextC,directions)) {
-                      return true;
-                 } else {
-                      solution[nextR][nextC] = -1;
-                  }
+            if (directionValid(nextR, nextC, solution)) {
+                if (knightTour(a, solution, nextR + 1, nextC, directions)) {
+                    return true;
+                } else {
+                    solution[nextR][nextC] = -1;
+                }
             }
         }
         return false;

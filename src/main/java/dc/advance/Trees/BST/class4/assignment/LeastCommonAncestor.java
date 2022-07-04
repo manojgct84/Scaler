@@ -60,7 +60,8 @@ public class LeastCommonAncestor {
     // parent node having one child which match B  and C don't return
     // parent node having one child which match C  and B don't return
     // There is another way both dont match and return null from the child.
-    private static TreeNode inOrderClassical(TreeNode root, int B, int C) {
+    private static TreeNode inOrderClassical(TreeNode root, int B, int C)
+    {
 
         if (root == null) {
             return null;

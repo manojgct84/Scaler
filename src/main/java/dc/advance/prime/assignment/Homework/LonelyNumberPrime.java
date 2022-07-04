@@ -1,6 +1,9 @@
 package dc.advance.prime.assignment.Homework;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 public class LonelyNumberPrime
 {
     public static void main (String[] args)
@@ -22,8 +25,8 @@ public class LonelyNumberPrime
             MAX = Math.max(MAX,number[i] );
         }
         
-        java.util.Arrays.sort (number);
-        java.util.Map <Integer, Integer> freq = new java.util.HashMap <> ();
+        Arrays.sort (number);
+        Map<Integer, Integer> freq = new HashMap<>();
         
         for (int value : number) {
             if (freq.containsKey (value)) {

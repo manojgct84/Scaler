@@ -8,6 +8,7 @@ public class ValidParenthesisCount {
 
     public static void main(String[] args) {
         System.out.println(validParenthesisCountBFS("(a)())()").toString());
+        System.out.println(validParenthesisCountBFS("()())()"));
     }
 
     private static ArrayList<Integer> validParenthesisCountBFS(String s) {
@@ -30,7 +31,7 @@ public class ValidParenthesisCount {
                 res.add(++count);
                 found = true;
             }
-            if (found) continue;  // Only if there is no valid Parenthesis in the queue,  then
+            if (found) continue;   // Only if there is no valid Parenthesis in the queue,  then
             // look for other combinations.
             for (int i = 0; i < str.length(); i++) {
                 if (str.charAt(i) == '(' || str.charAt(i) == ')') {
@@ -39,7 +40,7 @@ public class ValidParenthesisCount {
                 }
             }
         }
-        System.out.println(validParenthesis.toString());
+        System.out.println(validParenthesis);
         return res;
     }
 

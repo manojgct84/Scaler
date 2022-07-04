@@ -31,7 +31,7 @@ public class CommonNodesTwoBST {
     public static int commonNodesTwoBST(TreeNode A, TreeNode B) {
 
         Set<Integer> set = new HashSet<>();
-        storeInSet(A, set);
+        storeInSet(A, set); // inorder traversal
         total = 0;
         return findCommon(B, set);
     }

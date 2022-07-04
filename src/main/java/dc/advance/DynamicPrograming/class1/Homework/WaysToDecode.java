@@ -10,11 +10,11 @@ public class WaysToDecode {
 		System.out.println(numDecodings("4126"));
 		
 		System.out.println ("***ServiceNow****");
-		System.out.println(decode ("12"));
-		System.out.println(decode("8"));
-		System.out.println(decode("4126"));
-		System.out.println(decode("123"));
-		System.out.println(decode("923216"));
+		System.out.println(numDecodings ("12"));
+		System.out.println(numDecodings("8"));
+		System.out.println(numDecodings("4126"));
+		System.out.println(numDecodings("123"));
+		System.out.println(numDecodings("923216"));
 	}
 	
 	static int[] dp;
@@ -33,8 +33,8 @@ public class WaysToDecode {
 		dp[1] = 1;
 		
 		char[] c = A.toCharArray();
-		System.out.println(waysToDecode(c, c.length));
-		return waysToDecodeIterative(c, c.length);
+		return waysToDecode(c, c.length);
+		//waysToDecodeIterative(c, c.length);
 	}
 	
 	private static int waysToDecode (char[] c, int index) {
@@ -95,7 +95,7 @@ public class WaysToDecode {
 		StringBuilder append = new StringBuilder ();
 		for (int i = 0 ; i < str.length ()  - 1; i++) {
 			append.append (str.charAt (i) - '0');
-			append.append ( str.charAt (i + 1) - '0');
+			append.append (str.charAt (i + 1) - '0');
 			String s = append.toString ();
 			if (Integer.parseInt (s) > 9 && Integer.parseInt (s) < 27) {
 				count++;

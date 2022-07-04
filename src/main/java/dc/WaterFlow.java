@@ -1,5 +1,7 @@
 package dc;
 
+import org.jetbrains.annotations.NotNull;
+
 public class WaterFlow {
 
     /**
@@ -45,7 +47,7 @@ public class WaterFlow {
 
     }
 
-    public static int solve(int[][] matrix) {
+    public static int solve(@NotNull int[][] matrix) {
 
         int row = matrix.length;
         int col = matrix[0].length;
@@ -75,12 +77,14 @@ public class WaterFlow {
 
     static int[][] dist = {{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
 
-    private static void dfs(int[][] matrix, boolean[][] visited, int prev, int x, int y) {
+    private static void dfs(@NotNull int[][] matrix, boolean[][] visited,
+        int prev, int x, int y)
+    {
         int n = matrix.length;
         int m = matrix[0].length;
-       if (x < 0 || x >= n || y < 0 || y >= m || visited[x][y] || matrix[x][y] < prev)
-            return;
-
+       if (x < 0 || x >= n || y < 0 || y >= m || visited[x][y] || matrix[x][y] < prev) {
+           return;
+       }
         visited[x][y] = true;
 
         for (int[] i : dist) {

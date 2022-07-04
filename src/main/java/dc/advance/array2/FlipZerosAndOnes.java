@@ -9,7 +9,8 @@ public class FlipZerosAndOnes {
     public static void main(String[] args) {
         // System.out.println(Arrays.toString(flip("100100111101")));
         System.out.println(Arrays.toString(solve("010")));
-        System.out.println(Arrays.toString(solve("111")));
+        System.out.println(Arrays.toString(solve("00110")));
+        System.out.println(Arrays.toString(solve("010110")));
         System.out.println(Arrays.toString(getSolveAllPossibleIndex("0011101")));
     }
 

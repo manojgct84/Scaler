@@ -64,6 +64,7 @@ public class LongestConsecutiveOnes
         sumOfAllPath(root);
         System.out.println(res);
     }
+
     //Wrong
     private static void longestConsecutiveOnes (TreeNode root, int prev , boolean b)
     {
@@ -84,6 +85,7 @@ public class LongestConsecutiveOnes
         longestConsecutiveOnes (root.left, root.data , b);
         longestConsecutiveOnes (root.right, root.data , b);
     }
+
     //Wrong
     private static boolean longestConsecutiveZeros (TreeNode root, boolean b)
     {
@@ -105,6 +107,7 @@ public class LongestConsecutiveOnes
         }
         return true;
     }
+
     //Wrong
     private static int longestConsecutiveChange (TreeNode root)
     {

@@ -13,6 +13,7 @@ public class EvaluateExpression {
         System.out.println(getEvalRPN(new ArrayList<>(Arrays.asList("4", "13", "5", "/", "+"))));
         System.out.println(getEvalRPN(new ArrayList<>(Arrays.asList("5", "1", "2", "+", "4", "*",
                 "+", "3", "-"))));
+        System.out.println(getEvalRPN(new ArrayList<>(Arrays.asList("+", "1", "2"))));
     }
 
     public static int getEvalRPN(ArrayList<String> A) {
@@ -42,13 +43,16 @@ public class EvaluateExpression {
 
         int second = Integer.parseInt(stk.pop());
         int first = Integer.parseInt(stk.pop());
+        return calculationOperation(total, first, second, operator);
+    }
 
+    protected static int calculationOperation(int total, int first, int second, String operator) {
         switch (operator) {
             case "+":
                 total = second + first;
                 break;
             case "-":
-                total = first - second;
+                total =  second - first; // This has to change if pre expression to first - second
                 break;
             case "*":
                 total = second * first;
@@ -59,4 +63,5 @@ public class EvaluateExpression {
         }
         return total;
     }
+
 }
