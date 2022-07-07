@@ -45,11 +45,12 @@ public class CheapestPrize {
         output.put(startDate + "-" + (startDate + dataRange - 1), dayPrice);
 
         // Start from the K range and go till the end.
-        // start = 3 + j (here j is 2).
+
         int k = 1;
         for (int x = dataRange + 1; x <= treeMap.size(); x++) { //O(N-dataRange).
             // TC : O (N-dataRange * dataRange)
             min = Integer.MAX_VALUE;
+            // start = 3 + j (here j is 2).
             priceArray[x - 1] = Integer.parseInt(treeMap.get(startDate + j + 1).get("price:"));
             for (int i = k; i < x; i++) {
                 if (priceArray[i] < min) {
