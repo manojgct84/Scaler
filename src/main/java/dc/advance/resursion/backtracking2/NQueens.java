@@ -93,7 +93,8 @@ public class NQueens {
 
         for (int column = 0; column < size; column++) {
             if (!col[column] && !leftDiagonal[size + currentRow - column] &&
-                    !rightDiagonal[currentRow + column]) {
+                    !rightDiagonal[currentRow + column])
+            {
                 matrix[currentRow][column] = 1;
                 col[column] = true;
                 leftDiagonal[size + currentRow - column] = true;

@@ -8,7 +8,6 @@ public class CheapestPrize {
         System.out.println(getCheapestFlights(3, 3, 8));
     }
 
-
     public static LinkedHashMap<String, Map<String, String>>
         getCheapestFlights(int dataRange, int startDate, int endDate)
     {
@@ -46,6 +45,7 @@ public class CheapestPrize {
         output.put(startDate + "-" + (startDate + dataRange - 1), dayPrice);
 
         // Start from the K range and go till the end.
+        // start = 3 + j (here j is 2).
         int k = 1;
         for (int x = dataRange + 1; x <= treeMap.size(); x++) { //O(N-dataRange).
             // TC : O (N-dataRange * dataRange)
@@ -69,7 +69,9 @@ public class CheapestPrize {
         return output;
     }
 
-    private static Map<String, Map<String, String>> getFlights(int startDate, int endDate) {
+    private static Map<String, Map<String, String>>
+        getFlights(int startDate, int endDate)
+    {
         Map<String, Map<String, String>> output = new HashMap<>();
         Map<String, String> dayPrice1 = new HashMap<>();
         dayPrice1.put("price:", String.valueOf(300));
@@ -101,17 +103,14 @@ public class CheapestPrize {
 
 
     public static Map<String, Map<String, String>>
-    getOtherCheapestFlights(int dataRange, int startDate, int endDate) {
-
+    getOtherCheapestFlights(int dataRange, int startDate, int endDate)
+    {
         Map<String, Map<String, String>> price = getFlights(startDate, endDate);
-
         TreeMap<Integer, Map<String, String>> treeMap = new TreeMap<>();
 
         for (Map.Entry<String, Map<String, String>> map : price.entrySet()) {
             treeMap.put(Integer.valueOf(map.getKey()), map.getValue());
         }
-
-
         // K - size-window - 3
         // 3, 4, 5, 6, 7, 8
 
