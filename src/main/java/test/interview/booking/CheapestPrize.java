@@ -1,7 +1,104 @@
 package test.interview.booking;
 
 import java.util.*;
+import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * Booking.com
+ *
+ * Imagine Booking customers want to know the cheapest one-way flights from certain cities within
+ * date ranges between `start_day` and `end_day`. In this problem we will focus on a single one-way flight.
+ *
+ * The data comes from a web service call which is done in the function get_flights. This function
+ * is already written for you. For simplicity, days are represented as integers
+ *
+ * get_flights(start_day: int, end_day: int) -> hashmap<str, hashmap<str, int>>
+ *
+ * # Example:
+ *
+ * # get_flights(3, 8)
+ *
+ * # output ->
+ *
+ * # {
+ *
+ * 4: {"price": 300}, # eg. day 4 has a price of 300
+ *
+ * #
+ *
+ * # 3: {"price": 100},
+ *
+ * #
+ *
+ * # 8: {"price": 100}
+ *
+ * # }
+ *
+ * #}
+ *
+ * # there are many fields in each entry, only "price" is used in this
+ *
+ * problem
+ *
+ * Your task is to write the get_cheapest flights function which returns
+ *
+ * the day with the lowest flight price for every x day range (called
+ *
+ * `day_range`) between `start_day` and `end_day`
+ *
+ * # get_cheapest_flights(day_range: int, start_day: int, end_day: int) ->
+ * hashmap<str, hashmap< str, int>>
+ *
+ * # example:
+ *
+ * # get_cheapest flights(3, 3, 8)
+ *
+ * #
+ *
+ * Day
+ *
+ * 3
+ *
+ * 4
+ *
+ * 5
+ *
+ * 6
+ *
+ * 100, 300, 500, 500, 200, 100
+ *
+ * #
+ *
+ * {100,
+ *
+ * 300,
+ *
+ * 500}
+ *
+ * 7
+ *
+ * 8
+ *
+ * # ranges
+ *
+ * #
+ *
+ * {300, 500, 500} {500,
+ *
+ * # prices
+ *
+ * 200}
+ *
+ * 500, {500, 200, 100}
+ *
+ * # expected
+ *
+ * # output -> {"3-5": {"day": 3, "price": 100},
+ *
+ * "4-6": {"day": 4, "price": 300},
+ *
+ * "5-7": {"day": 7, "price": 200}, "6-8": {"day": 8, "price": 100}}
+ */
 public class CheapestPrize {
     //Sliding Window
     public static void main(String[] args) {
@@ -73,6 +170,10 @@ public class CheapestPrize {
     private static Map<String, Map<String, String>>
         getFlights(int startDate, int endDate)
     {
+        ReentrantLock lock = new ReentrantLock();
+        lock.lock();
+
+        lock.unlock();
         Map<String, Map<String, String>> output = new HashMap<>();
         Map<String, String> dayPrice1 = new HashMap<>();
         dayPrice1.put("price:", String.valueOf(300));
