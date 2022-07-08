@@ -16,87 +16,29 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * # Example:
  *
- * # get_flights(3, 8)
- *
- * # output ->
- *
- * # {
- *
+ * # get_flights(3, 8) output -> {
  * 4: {"price": 300}, # eg. day 4 has a price of 300
- *
- * #
- *
- * # 3: {"price": 100},
- *
- * #
- *
- * # 8: {"price": 100}
- *
- * # }
- *
- * #}
- *
- * # there are many fields in each entry, only "price" is used in this
- *
+ * 3: {"price": 100},
+ * 8: {"price": 100}
+ *   }
+ * there are many fields in each entry, only "price" is used in this
  * problem
- *
  * Your task is to write the get_cheapest flights function which returns
- *
  * the day with the lowest flight price for every x day range (called
- *
  * `day_range`) between `start_day` and `end_day`
  *
- * # get_cheapest_flights(day_range: int, start_day: int, end_day: int) ->
+ * get_cheapest_flights(day_range: int, start_day: int, end_day: int) ->
  * hashmap<str, hashmap< str, int>>
+ * example:
+ * get_cheapest flights(3, 3, 8)
+ * Day 3 , 4 ,  5 ,  6  , 7  , 8
+ *    100, 300, 500, 500, 200, 100
+ *    {100, 300, 500}
+ *          {300, 500, 500}
+ *                {500, 200, 100}
  *
- * # example:
- *
- * # get_cheapest flights(3, 3, 8)
- *
- * #
- *
- * Day
- *
- * 3
- *
- * 4
- *
- * 5
- *
- * 6
- *
- * 100, 300, 500, 500, 200, 100
- *
- * #
- *
- * {100,
- *
- * 300,
- *
- * 500}
- *
- * 7
- *
- * 8
- *
- * # ranges
- *
- * #
- *
- * {300, 500, 500} {500,
- *
- * # prices
- *
- * 200}
- *
- * 500, {500, 200, 100}
- *
- * # expected
- *
- * # output -> {"3-5": {"day": 3, "price": 100},
- *
- * "4-6": {"day": 4, "price": 300},
- *
+ * expected :
+ * output -> {"3-5": {"day": 3, "price": 100}, "4-6": {"day": 4, "price": 300},
  * "5-7": {"day": 7, "price": 200}, "6-8": {"day": 8, "price": 100}}
  */
 public class CheapestPrize {
@@ -143,6 +85,7 @@ public class CheapestPrize {
 
         // Start from the K range and go till the end.
 
+        //Sliding window Formula - val += A[i] - A[i-K]  {K - is the size}
         int k = 1;
         for (int x = dataRange + 1; x <= treeMap.size(); x++) { //O(N-dataRange).
             // TC : O (N-dataRange * dataRange)
